@@ -1,0 +1,370 @@
+@import url('https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap');
+
+body {
+    background-color: #fbd8ee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    overflow: auto;
+}
+
+.cherry {
+    font-family: "Cherry Bomb One", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.bruno {
+    font-family: "Bruno Ace SC", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.dm {
+    font-family: "DM Serif Text", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+.main-container {
+    background-color: #f4badd;
+    width: 90%;
+    border-radius: 12px;
+    box-sizing: border-box;
+}
+
+.header-image-container {
+    height: 300px;
+    background-image: url("../image/header.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0 -200px;
+    border-radius: 12px;
+    text-align: center;
+
+}
+
+.proflie-picture {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: -70px;
+    row-gap: 2px;
+}
+
+.proflie-picture img {
+    height: 150px;
+    border-radius: 50%;
+    border: 1px solid #f7f7f7;
+}
+
+.user-name {
+    padding: 0;
+    margin: 0;
+    color: #f7f7f7;
+    font-weight: bolder;
+    font-size: 2.5rem;
+}
+
+.desc {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.desc p {
+    color: #f7f7f7;
+    font-size: 1.3rem;
+    font-weight: 800;
+}
+
+.feature {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    box-sizing: border-box;
+}
+
+.feature a {
+    margin: 0;
+    padding: 0;
+    color: #f7f7f7;
+    font-weight: 600;
+    text-decoration: none;
+    padding-bottom: 8px;
+}
+
+.feature a:hover {
+    border-bottom: 3px solid #f7f7f7;
+}
+
+.active {
+    border-bottom: 3px solid #f7f7f7;
+}
+
+.form-container {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#postingan {
+    display: flex;
+    flex-direction: column;
+    height: 55vh;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    /* background-color: #fde2e4; */
+    gap: 10px;
+    box-sizing: border-box;
+}
+
+#judulArtikel {
+    color: #333333;
+    background-color: #fde2e4;
+    border: none;
+    padding: 12px;
+    width: 40%;
+    border-radius: 15px;
+    outline: none;
+    font-size: 1rem;
+}
+
+#judulArtikel::placeholder {
+    color: #777777;
+}
+
+#judulArtkel:focus {
+    outline: none;
+    /* border: 1px solid white; */
+}
+
+#judulArtikel:focus::placeholder {
+    color: transparent;
+}
+
+#isiPostingan {
+    color: #333333;
+    background-color: #fde2e4;
+    border: none;
+    padding: 12px;
+    outline: none;
+    border: none;
+    border-radius: 12px;
+    resize: none;
+}
+
+
+#isiPostingan:focus::placeholder {
+    color: transparent;
+}
+
+.sumbit-btn {
+    padding: 12px;
+    width: 30%;
+    outline: none;
+    /* border: 1px solid white; */
+    border: none;
+    background-color: #e9b7bc;
+    margin-bottom: 15px;
+    color: white;
+    font-weight: bolder;
+    border-radius: 10px;
+}
+
+.list-postingan-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: end;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    gap: 14px;
+
+
+}
+
+.postingan-card {
+    width: 40%;
+    /* padding: 12px; */
+    box-sizing: border-box;
+    background-color: rgb(233, 233, 233);
+    border-radius: 10px;
+    border: 2px solid #fde2e4;
+    overflow: auto;
+}
+
+.postingan-card .title {
+    color: #333333;
+}
+
+
+.header-postingan {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 12px;
+    box-sizing: border-box;
+}
+
+.header-postingan .delete-btn {
+    color: red;
+    font-size: 20px;
+}
+
+.header-postingan .delete-btn::after {
+    content: "HAPUS POSTINGAN";
+    display: none;
+    font-size: 10px;
+    position: absolute;
+    z-index: 1;
+    margin-left: 10px;
+    margin-top: 5px;
+    background-color: bisque;
+    padding: 4px;
+    font-weight: bolder;
+    transition: all 0.5s ease-in-out;
+}
+
+.header-postingan .delete-btn:hover::after {
+    display: inline;
+
+}
+
+.text-content-card {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    overflow: auto;
+    background-color: white;
+    padding: 12px;
+    box-sizing: border-box;
+}
+
+.header-postingan .delete-btn:hover {
+    cursor: pointer;
+}
+
+.profile-name-img {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 5px;
+    box-sizing: border-box;
+}
+
+.dummy-div {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+}
+
+.profile-name-img .username-card {
+    padding: 0;
+    margin: 0;
+    font-weight: 200;
+    font-size: 16px;
+}
+
+.desc-di-header {
+    font-size: 10px;
+    padding: 0;
+    margin: 0;
+    font-weight: 500;
+}
+
+.img-on-postingan {
+    height: 42px;
+    border-radius: 5px;
+}
+
+
+.comment-section {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* padding: 12px; */
+}
+
+.cmnt-icon {
+    font-size: 20px;
+}
+
+
+.cmnt-icon:hover {
+    cursor: pointer;
+}
+
+.comment-section a {
+    text-decoration: none;
+    color: black;
+}
+
+.comment-page {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    display: none;
+    flex-direction: column;
+}
+
+.user-comment {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    display: flex;
+    justify-content: space-around;
+    gap: 5px;
+}
+
+.user-comment img {
+    border-radius: 50%;
+    border: 1px solid black;
+}
+
+.iniKomentarnya {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    box-sizing: border-box;
+    padding: 5px;
+    border-radius: 16px;
+}
+
+.iniKomentarnya:focus::placeholder {
+    color: transparent;
+}
+
+.list-komentar {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.comment-card {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.comment-card p {
+    flex: 1;
+    text-align: start;
+    background-color: rgb(255, 254, 254);
+    padding: 12px;
+}
